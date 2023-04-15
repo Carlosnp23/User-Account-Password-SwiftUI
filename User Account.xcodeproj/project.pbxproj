@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C88AE529EAF902002C4186 /* User_AccountApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C88AE429EAF902002C4186 /* User_AccountApp.swift */; };
-		07C88AE729EAF902002C4186 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C88AE629EAF902002C4186 /* ContentView.swift */; };
+		07C88AE729EAF902002C4186 /* UserAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C88AE629EAF902002C4186 /* UserAccountView.swift */; };
 		07C88AE929EAF902002C4186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C88AE829EAF902002C4186 /* Assets.xcassets */; };
 		07C88AEC29EAF902002C4186 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C88AEB29EAF902002C4186 /* Preview Assets.xcassets */; };
+		07C88AF329EB0861002C4186 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C88AF229EB0861002C4186 /* ChangePasswordView.swift */; };
+		07C88AF829EB2971002C4186 /* User_Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C88AF729EB2971002C4186 /* User_Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07C88AE129EAF902002C4186 /* User Account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "User Account.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07C88AE429EAF902002C4186 /* User_AccountApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_AccountApp.swift; sourceTree = "<group>"; };
-		07C88AE629EAF902002C4186 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07C88AE629EAF902002C4186 /* UserAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountView.swift; sourceTree = "<group>"; };
 		07C88AE829EAF902002C4186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C88AEB29EAF902002C4186 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07C88AF229EB0861002C4186 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		07C88AF729EB2971002C4186 /* User_Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,9 @@
 		07C88AE329EAF902002C4186 /* User Account */ = {
 			isa = PBXGroup;
 			children = (
-				07C88AE429EAF902002C4186 /* User_AccountApp.swift */,
-				07C88AE629EAF902002C4186 /* ContentView.swift */,
+				07C88AF729EB2971002C4186 /* User_Account.swift */,
+				07C88AE629EAF902002C4186 /* UserAccountView.swift */,
+				07C88AF229EB0861002C4186 /* ChangePasswordView.swift */,
 				07C88AE829EAF902002C4186 /* Assets.xcassets */,
 				07C88AEA29EAF902002C4186 /* Preview Content */,
 			);
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C88AE729EAF902002C4186 /* ContentView.swift in Sources */,
-				07C88AE529EAF902002C4186 /* User_AccountApp.swift in Sources */,
+				07C88AF829EB2971002C4186 /* User_Account.swift in Sources */,
+				07C88AE729EAF902002C4186 /* UserAccountView.swift in Sources */,
+				07C88AF329EB0861002C4186 /* ChangePasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
