@@ -10,6 +10,10 @@ import SwiftUI
 struct ChangePasswordView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var actualPassword: String = ""
+    @State private var originalActualPassword: String = ""
+    @State private var hasChangesActualPassword: Bool = false
+    
     @State private var newPassword: String = ""
     @State private var originalNewPassword: String = ""
     @State private var hasChangesNewPassword: Bool = false
@@ -23,6 +27,24 @@ struct ChangePasswordView: View {
     var body: some View {
         NavigationStack {
             Form {
+                HStack(alignment: .center) {
+                    Text("Actual Password: ")
+                    Spacer(minLength: 50)
+                    SecureField("Actual Password", text: $actualPassword)
+                        .keyboardType(.namePhonePad)
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical, 8)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .onAppear {
+                            // When the view is displayed, we save the original text
+                            originalActualPassword = actualPassword
+                        }
+                        .onChange(of: actualPassword) { newValue in
+                            // When the text changes, we compare with the original text
+                            hasChangesActualPassword = newValue != originalActualPassword
+                        }
+                }
                 HStack(alignment: .center) {
                     Text("New Password: ")
                     Spacer(minLength: 50)
@@ -44,7 +66,7 @@ struct ChangePasswordView: View {
                 HStack(alignment: .center) {
                     Text("Verify Password: ")
                     Spacer(minLength: 50)
-                    SecureField("Re-Enter Password", text: $verifyPassword)
+                    SecureField("Re-enter Password", text: $verifyPassword)
                         .multilineTextAlignment(.center)
                         .padding(.vertical, 8)
                         .background(Color(.systemGray6))
@@ -85,6 +107,7 @@ struct ChangePasswordView: View {
     
     func hasChanges() -> Bool {
         return hasChangesNewPassword || hasChangesVerifyPassword
+                || hasChangesActualPassword
         // We add any additional state variables that are needed
     }
 }
